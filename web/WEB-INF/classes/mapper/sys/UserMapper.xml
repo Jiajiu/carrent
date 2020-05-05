@@ -202,4 +202,9 @@
   <insert id="insertUserRole">
     insert into sys_role_user(uid,rid) values (#{uid},#{rid})
   </insert>
+
+  <!--根据用户名修改密码-->
+  <update id="changePwd">
+    update sys_user set pwd=#{pwd} where realname=#{uname}
+  </update>
 </mapper>

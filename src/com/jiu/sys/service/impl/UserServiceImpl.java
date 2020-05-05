@@ -124,4 +124,16 @@ public class UserServiceImpl implements UserService {
 		}
 	}
 
+	/**
+	 * 根据用户名修改密码
+	 * @param uname
+	 * @param pwd
+	 */
+	@Override
+	public void changePwd(String uname, String pwd) {
+		User user=new User();
+		user.setPwd(DigestUtils.md5DigestAsHex(pwd.getBytes()));
+		this.userMapper.changePwd(uname,user.getPwd());
+	}
+
 }

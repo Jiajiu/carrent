@@ -37,4 +37,12 @@ public interface UserMapper {
 	 * @param rid
 	 */
     void insertUserRole(@Param("uid") Integer userid, @Param("rid") Integer rid);
+
+	/**
+	 * 根据用户名修改密码
+	 * @param uname
+	 * @param pwd
+	 */
+	void changePwd(@Param("uname") String uname, @Param("pwd") String pwd);
+
 }

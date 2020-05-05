@@ -68,4 +68,11 @@ public interface UserService {
 	 * @param userVo
 	 */
 	void saveUserRole(UserVo userVo);
+
+	/**
+	 * 根据用户名修改密码
+	 * @param uname
+	 * @param pwd
+	 */
+	void changePwd(String uname, String pwd);
 }

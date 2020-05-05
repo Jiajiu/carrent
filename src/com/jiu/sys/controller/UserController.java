@@ -134,4 +134,21 @@ public class UserController {
             return ResultObj.DISPATCH_FAILED;
         }
     }
+
+    /**
+     * 根据用户名修改密码
+     * @param uname
+     * @param pwd
+     * @return
+     */
+    @RequestMapping("changePwd")
+    public ResultObj changePwd(String uname,String pwd){
+        try{
+            this.userService.changePwd(uname,pwd);
+            return ResultObj.UPDATE_SUCCESS;
+        }catch (Exception e){
+            e.printStackTrace();
+            return ResultObj.UPDATE_FAILED;
+        }
+    }
 }

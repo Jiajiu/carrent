@@ -66,4 +66,22 @@ public class SysController {
     public String toNewsManager() {
         return "system/news/newsManager";
     }
+
+    /**
+     * 跳转到修改密码页面
+     * @return
+     */
+    @RequestMapping("toChangePwd")
+    public String toChangePwd(){
+        return "system/user/changePwd";
+    }
+
+//    /**
+//     * 跳转到修改密码页面
+//     * @return
+//     */
+//    @RequestMapping("toUserInfo")
+//    public String toUserInfo(){
+//        return "system/user/userInfo";
+//    }
 }
